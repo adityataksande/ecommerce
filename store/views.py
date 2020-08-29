@@ -27,7 +27,10 @@ def checkout(request):
 
     else:
         # Create Empty cart for now non-logged user in users
-        order = {'get_cart_total': 0 , 'get_cart_items': 0}
         items =[]
+        order = {'get_cart_total': 0 , 'get_cart_items': 0}
+        
     context ={'items':items, 'order': order}
+    
     return render(request,'store/checkout.html', context)
+ 
